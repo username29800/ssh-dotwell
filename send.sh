@@ -1,5 +1,5 @@
 #!/bin/sh
-. ./src.sh
+. "$ldwell_config_file"
 
 dwfs_src="$dwfs_prefix$1"
 dwfs_dst="$dwfs_prefix$2"

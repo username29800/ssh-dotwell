@@ -28,18 +28,18 @@ echo cdw_session_idlist='\''"$(echo "$(ldwell_flatten_idlist)" | sed "s,\(^\| \)
 '
 alias dwell_create_config="$dwell_create_config"
 
-dwell_save_config='echo "$(dwell_create_config)" >> "$ldwell_config_file"'
+dwell_save_config='echo "$(dwell_create_config)" >> "$ldwell_path/$ldwell_config_file"'
 alias dwell_save_config="$dwell_save_config"
 
-dwell_rm_config='rm -f "$ldwell_config_file"'
+dwell_rm_config='rm -f "$ldwell_path/$ldwell_config_file"'
 alias dwell_rm_config="$dwell_rm_config"
 
 dwell_new_key='
-mkdir -p "$dwcm_keystore_path"
-mkdir -p "$dwcm_keystore_backup"
-mv "$dwcm_keystore_path/$dwcm_newkey_name" "$dwcm_keystore_backup/$dwcm_newkey_name"
-mv "$dwcm_keystore_path/$dwcm_newkey_name".pub "$dwcm_keystore_backup/$dwcm_newkey_name".pub
-ssh-keygen -t ed25519 -N "" -f "$dwcm_keystore_path/$dwcm_newkey_name"
-chmod 0700 "$dwcm_keystore_path"
-chmod -R 0600 "$dwcm_keystore_path"/*'
+mkdir -p "$ldwell_path/$dwcm_keystore_path"
+mkdir -p "$ldwell_path/$dwcm_keystore_backup"
+mv "$ldwell_path/$dwcm_keystore_path/$dwcm_newkey_name" "$ldwell_path/$dwcm_keystore_backup/$dwcm_newkey_name"
+mv "$ldwell_path/$dwcm_keystore_path/$dwcm_newkey_name".pub "$ldwell_path/$dwcm_keystore_backup/$dwcm_newkey_name".pub
+ssh-keygen -t ed25519 -N "" -f "$ldwell_path/$dwcm_keystore_path/$dwcm_newkey_name"
+chmod 0700 "$ldwell_path/$dwcm_keystore_path"
+chmod -R 0600 "$ldwell_path/$dwcm_keystore_path"/*'
 alias dwell_new_key="$dwell_new_key"

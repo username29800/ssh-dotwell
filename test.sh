@@ -20,7 +20,7 @@ dwcm_keystore_path='keystore'
 dwcm_keystore_backup='keystore_backup'
 rdwcm_authfile='/home/user/.ssh/authorized_keys'
 
-cdw_env_home='/home/th'
+cdw_env_home='/home/user'
 cdw_session_args="-o UserKnownHostsFile=$ldwell_path/dotssh_internal/known_hosts"
 cdw_session_args_srv="-o AuthorizedKeysFile=$ldwell_path/dotssh_internal/authorized_keys"
 cdw_session_idlist="$(echo "$(ldwell_flatten_idlist)" | sed "s,\(^\| \),$ldwell_path/&,g")"

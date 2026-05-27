@@ -34,3 +34,7 @@ alias ldwell_flatten_idlist="$ldwell_flatten_idlist"
 ldwell_gen_idopts='
 cdw_session_id="$(echo "$(ldwell_flatten_idlist)" | sed '\''s, , -i ,g'\'' | sed '\''s,^ -i ,,g'\'' | sed '\''s,\( -i\)*$,,'\'')"'
 alias ldwell_gen_idopts="eval $ldwell_gen_idopts"
+
+ldwell_loader_is='
+read ldwell_loader'
+alias ldwell_loader_is="$ldwell_loader_is"

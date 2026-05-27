@@ -14,3 +14,6 @@ ldwell_gen_idopts
 $cdw_xcp -i $cdw_session_id -OCrp -P "$cdw_session_port" $cdw_session_jmp $cdw_session_args "$dwfs_src" ${cdw_session_user}@${cdw_session_host}:"$dwfs_dst"
 echo "saved to $dwfs_dst"'
 alias dwell_send="$dwell_send"
+
+alias sdwsrc="dwfs_src="\"
+alias sdwdst="dwfs_dst="\"

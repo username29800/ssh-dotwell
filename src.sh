@@ -2,6 +2,7 @@
 . ./ocsn.sh
 . ./occm.sh
 . ./ocfs.sh
+ldwell_path='.'
 ldwell_config_lfile='./config_list'
 ldwell_config_alias='test'
 ldwell_set_config

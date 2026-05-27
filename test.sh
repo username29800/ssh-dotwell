@@ -1,3 +1,4 @@
+ldwell_path='/home/user/sdw'
 cdw_xsh='/usr/bin/ssh'
 cdw_xcp='/usr/bin/scp'
 cdw_srv='/usr/sbin/sshd'
@@ -5,7 +6,7 @@ cdw_session_selfname='localhost'
 cdw_session_host='localhost'
 cdw_session_port='22'
 cdw_session_idlist='
-keystore/key_default'
+key_default'
 cdw_session_user='user'
 cdw_session_jmp=''
 cdw_session_fwdrules='
@@ -19,6 +20,7 @@ dwcm_keystore_path='keystore'
 dwcm_keystore_backup='keystore_backup'
 rdwcm_authfile='/home/user/.ssh/authorized_keys'
 
-cdw_env_home='/home/user'
-cdw_session_args='-o UserKnownHostsFile=./dotssh_internal/known_hosts'
-cdw_session_args_srv='-o AuthorizedKeysFile=./dotssh_internal/authorized_keys'
+cdw_env_home='/home/th'
+cdw_session_args="-o UserKnownHostsFile=$ldwell_path/dotssh_internal/known_hosts"
+cdw_session_args_srv="-o AuthorizedKeysFile=$ldwell_path/dotssh_internal/authorized_keys"
+cdw_session_idlist="$(echo "$(ldwell_flatten_idlist)" | sed "s,\(^\| \),$ldwell_path/&,g")"

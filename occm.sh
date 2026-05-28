@@ -1,5 +1,5 @@
 dwell_create_config='
-echo ldwell_path='\\\''"$(pwd)"'\\\''
+echo ldwell_path='\\\''"$PWD"'\\\''
 echo cdw_xsh='\\\''/usr/bin/ssh'\\\''
 echo cdw_xcp='\\\''/usr/bin/scp'\\\''
 echo cdw_srv='\\\''/usr/sbin/sshd'\\\''
@@ -12,7 +12,7 @@ echo cdw_session_user='\\\''user'\\\''
 echo cdw_session_jmp='\\\'''\\\''
 echo cdw_session_fwdrules='\\\'\''
 -R 6000::6000'\'\\\''
-echo ldwell_fwds='\''"$(eval ldwell_create_fwdrule)"'\''
+echo ldwell_fwds='\''"`eval ldwell_create_fwdrule`'\''
 echo
 echo dwfs_prefix='\\\''./'\\\''
 echo
@@ -24,11 +24,11 @@ echo
 echo cdw_env_home='\\\''"$HOME"'\\\''
 echo cdw_session_args='\''"-o UserKnownHostsFile=$ldwell_path/dotssh_internal/known_hosts"'\''
 echo cdw_session_args_srv='\''"-o AuthorizedKeysFile=$ldwell_path/dotssh_internal/authorized_keys"'\''
-echo cdw_session_idlist='\''"$(echo "$(ldwell_flatten_idlist)" | sed "s,\(^\| \),$ldwell_path/$dwcm_keystore_path/&,g")"'\''
+echo cdw_session_idlist='\''"`echo "\`ldwell_flatten_idlist\`" | sed "s,\(^\| \),$ldwell_path/$dwcm_keystore_path/&,g"`"'\''
 '
 alias dwell_create_config="$dwell_create_config"
 
-dwell_save_config='echo "$(dwell_create_config)" >> "$ldwell_path/$ldwell_config_file"'
+dwell_save_config='echo "`dwell_create_config`" >> "$ldwell_path/$ldwell_config_file"'
 alias dwell_save_config="$dwell_save_config"
 
 dwell_rm_config='rm -f "$ldwell_path/$ldwell_config_file"'

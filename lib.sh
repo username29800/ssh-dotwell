@@ -1,4 +1,4 @@
-ldwell_print_alias='echo "$(eval "$(echo "$ldwell_print" | sed '\''s,^,echo ,'\'' | sed '\''s,&&,\\\&\\\&,g'\'' | sed '\''s,\([^\\]\)&,\1\\&,g'\'' | sed '\''s,;,\\\;,g'\''| sed '\''s,>,\\\>,g'\'' | sed '\''s,<,\\\<,g'\''| sed '\''s,|,\\\|,g'\'')")"'
+ldwell_print_alias='echo "`eval "\`echo "$ldwell_print" | sed '\''s,^,echo ,'\'' | sed '\''s,&&,\\\&\\\&,g'\'' | sed '\''s,\([^\\]\)&,\1\\&,g'\'' | sed '\''s,;,\\\;,g'\''| sed '\''s,>,\\\>,g'\'' | sed '\''s,<,\\\<,g'\''| sed '\''s,|,\\\|,g'\''\`"`"'
 alias ldwell_print_alias="$ldwell_print_alias"
 
 ldwell_config_list='cat "$ldwell_path/$ldwell_config_lfile"'
@@ -14,7 +14,7 @@ ldwell_load_config='. "$ldwell_path/$ldwell_config_file"'
 alias ldwell_load_config="$ldwell_load_config"
 
 ldwell_set_config='
-ldwell_config_file="$(ldwell_config_list | grep "^$ldwell_config_alias " | sed '\''s,^[^ ]* *,,'\'')"'
+ldwell_config_file="`ldwell_config_list | grep "^$ldwell_config_alias " | sed '\''s,^[^ ]* *,,'\''`"'
 #alias ldwell_update_config="ldwell_config_file="\""$(eval $ldwell_update_config)"\"""
 alias ldwell_set_config="$ldwell_set_config"
 
@@ -32,5 +32,5 @@ echo "$cdw_session_idlist" | tr \\n \  | sed '\''s,^ *,,'\'' | sed '\''s, *$,,'\
 alias ldwell_flatten_idlist="$ldwell_flatten_idlist"
 
 ldwell_gen_idopts='
-cdw_session_id="$(echo "$(ldwell_flatten_idlist)" | sed '\''s, , -i ,g'\'' | sed '\''s,^ -i ,,g'\'' | sed '\''s,\( -i\)*$,,'\'')"'
+cdw_session_id="`echo "\`ldwell_flatten_idlist\`" | sed '\''s, , -i ,g'\'' | sed '\''s,^ -i ,,g'\'' | sed '\''s,\( -i\)*$,,'\''`"'
 alias ldwell_gen_idopts="eval $ldwell_gen_idopts"

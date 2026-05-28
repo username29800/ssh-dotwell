@@ -15,5 +15,5 @@ $cdw_xcp -i $cdw_session_id -OCrp -P "$cdw_session_port" $cdw_session_jmp $cdw_s
 echo "saved to $dwfs_dst"'
 alias dwell_send="$dwell_send"
 
-alias sdwsrc="dwfs_src="\""\$(echo"
-alias sdwdst="dwfs_dst="\""\$(echo"
+alias sdwsrc="dwfs_src="\""\`echo"
+alias sdwdst="dwfs_dst="\""\`echo"

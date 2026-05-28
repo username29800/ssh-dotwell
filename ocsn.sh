@@ -38,9 +38,9 @@ alias dwell_set_cmd="$dwell_set_cmd"
 
 dwell_auth='
 ldwell_gen_idopts
-rdw_keylist="$(echo "$(ldwell_flatten_idlist)" | sed '\''s,\( \|$\),.pub&,g'\'')"
-rdw_key="$(cat $rdw_keylist)"
-rdw_kpath="$(echo "$rdwcm_authfile" | sed "s,/[^/]*$,,")"
+rdw_keylist="`echo "\`ldwell_flatten_idlist\`" | sed '\''s,\( \|$\),.pub&,g'\''`"
+rdw_key="`cat $rdw_keylist`"
+rdw_kpath="`echo "$rdwcm_authfile" | sed "s,/[^/]*$,,"`"
 rdw_cmd="mkdir -p $rdw_kpath && echo '\''$rdw_key'\'' >> $rdwcm_authfile && chmod 0600 $rdwcm_authfile"
 dwell_cone'
 alias dwell_auth="$dwell_auth"

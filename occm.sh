@@ -12,7 +12,7 @@ echo cdw_session_user='\\\''user'\\\''
 echo cdw_session_jmp='\\\'''\\\''
 echo cdw_session_fwdrules='\\\'\''
 -R 6000::6000'\'\\\''
-echo ldwell_fwds='\''"`eval ldwell_create_fwdrule`'\''
+echo ldwell_fwds='\''"`eval ldwell_create_fwdrule`"'\''
 echo
 echo dwfs_prefix='\\\''./'\\\''
 echo

@@ -25,7 +25,7 @@ echo "starting server instance"
 echo "with config file $ldwell_config_file"
 echo "hostkey $cdw_session_id"
 echo "listening on port $cdw_session_port"
-$cdw_xsv -h "$cdw_session_id" -p "$cdw_session_port" $cdw_session_args_srv'
+$cdw_srv -h "$cdw_session_id" -p "$cdw_session_port" $cdw_session_args_srv'
 alias dwell_srv="$dwell_srv"
 
 dwell_cone='

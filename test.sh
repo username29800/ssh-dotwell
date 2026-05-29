@@ -14,6 +14,7 @@ cdw_session_fwdrules='
 ldwell_fwds="`eval ldwell_create_fwdrule`"
 
 dwfs_prefix='./'
+rdwfs_prefix='./'
 
 dwcm_newkey_name='key_default'
 dwcm_keystore_path='keystore'

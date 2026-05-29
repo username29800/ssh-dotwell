@@ -15,6 +15,7 @@ echo cdw_session_fwdrules='\\\'\''
 echo ldwell_fwds='\''"`eval ldwell_create_fwdrule`"'\''
 echo
 echo dwfs_prefix='\\\''./'\\\''
+echo rdwfs_prefix='\\\''./'\\\''
 echo
 echo dwcm_newkey_name='\\\''key_default'\\\''
 echo dwcm_keystore_path='\\\''keystore'\\\''

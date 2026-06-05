@@ -19,12 +19,12 @@ ldwell_config_file="`ldwell_config_list | grep "^$ldwell_config_alias " | sed '\
 alias ldwell_set_config="$ldwell_set_config"
 
 ldwell_config_is='
-ldwell_config_alias="`cat - | head -n1`"
+read ldwell_config_alias
 ldwell_set_config'
 alias ldwell_config_is="$ldwell_config_is"
 
 ldwell_call_config='
-cat - | ldwell_config_is
+ldwell_set_config
 ldwell_load_config
 ldwell_gen_idopts
 echo

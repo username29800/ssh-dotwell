@@ -19,9 +19,32 @@ ldwell_config_file="`ldwell_config_list | grep "^$ldwell_config_alias " | sed '\
 alias ldwell_set_config="$ldwell_set_config"
 
 ldwell_config_is='
-read ldwell_config_alias
+ldwell_config_alias="`cat - | head -n1`"
 ldwell_set_config'
 alias ldwell_config_is="$ldwell_config_is"
+
+ldwell_call_config='
+cat - | ldwell_config_is
+ldwell_load_config
+ldwell_gen_idopts
+echo
+echo path - "$ldwell_path"
+echo host - "ssh://$cdw_session_host:$cdw_session_port"
+echo  id  - "$cdw_session_idlist"
+echo
+echo host path prefix
+echo "`echo "$dwfs_prefix" | sed '\''s,^$,(empty),'\''`"
+echo remote path prefix
+echo "`echo "$rdwfs_prefix" | sed '\''s,^$,(empty),'\''`"
+echo
+echo auth \> dwell_auth
+echo conn \> dwell_con
+echo exec \> dwell_cone
+echo '\'' new'\'' \> dwell_env
+echo inst \> dwell_new_key
+echo
+'
+alias ldwell_call_config="$ldwell_call_config"
 
 ldwell_create_fwdrule='echo "$cdw_session_fwdrules" | sed '\"'s,\([^:]\)::\([^:]\),\1:$cdw_session_selfname:\2,'\"' | tr \\n " "'
 alias ldwell_create_fwdrule="$ldwell_create_fwdrule"

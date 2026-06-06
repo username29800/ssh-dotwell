@@ -44,7 +44,7 @@ echo ldw_config_list='\''"$ldwell_config_lfile"'\''
 echo 
 echo ldw_default_config='\''"$ldwell_config_alias"'\''
 echo 
-echo ldwell_config_lfile='\'\"'$ldwell_path/$ldw_config_list'\"\''
+echo ldwell_config_lfile='\'\"'$ldw_config_list'\"\''
 echo ldwell_config_alias='\'\"'$ldw_default_config'\"\''
 echo ldwell_call_config
 '

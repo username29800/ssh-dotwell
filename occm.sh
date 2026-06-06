@@ -30,14 +30,15 @@ echo cdw_session_idlist='\''"`echo "\`ldwell_flatten_idlist\`" | sed "s,\(^\| \)
 alias dwell_create_config="$dwell_create_config"
 
 dwell_create_loader='
+cdw_ldwell_path="`pwd`"
 echo ldwell_path='\\\''"`pwd`"'\\\''
 echo 
 echo ldwell_loader='\'\"'$ldwell_path'\"\''/"$ldwell_loader"
 echo
-echo . "$ldwell_path"/lib.sh
-echo . "$ldwell_path"/ocsn.sh
-echo . "$ldwell_path"/occm.sh
-echo . "$ldwell_path"/ocfs.sh
+echo . "$cdw_ldwell_path"/lib.sh
+echo . "$cdw_ldwell_path"/ocsn.sh
+echo . "$cdw_ldwell_path"/occm.sh
+echo . "$cdw_ldwell_path"/ocfs.sh
 echo 
 echo ldw_config_list='\''"$ldwell_config_lfile"'\''
 echo 

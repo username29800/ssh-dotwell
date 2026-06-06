@@ -1,5 +1,5 @@
 dwell_create_config='
-echo ldwell_path='\\\''"$PWD"'\\\''
+echo ldwell_path='\\\''"$ldwell_path"'\\\''
 echo cdw_xsh='\\\''/usr/bin/ssh'\\\''
 echo cdw_xcp='\\\''/usr/bin/scp'\\\''
 echo cdw_srv='\\\''/usr/sbin/sshd'\\\''
@@ -31,7 +31,7 @@ alias dwell_create_config="$dwell_create_config"
 
 dwell_create_loader='
 cdw_ldwell_path="`pwd`"
-echo ldwell_path='\\\''"$ldwell_path"'\\\''
+echo ldwell_path='\\\''"$cdw_ldwell_path"'\\\''
 echo 
 echo ldwell_loader='\'\"'$ldwell_path'\"\''/"$ldwell_loader"
 echo

@@ -1,4 +1,3 @@
-# adjust this field when renaming or copying this file
 ldwell_loader='src.sh'
 
 ldwell_path='.'

@@ -29,8 +29,30 @@ echo cdw_session_idlist='\''"`echo "\`ldwell_flatten_idlist\`" | sed "s,\(^\| \)
 '
 alias dwell_create_config="$dwell_create_config"
 
+dwell_create_loader='
+echo ldwell_loader='\\\''"$ldwell_path/$ldwell_loader"'\\\''
+echo 
+echo ldwell_path='\\\''"`pwd`"'\\\''
+echo . "$ldwell_path"/lib.sh
+echo . "$ldwell_path"/ocsn.sh
+echo . "$ldwell_path"/occm.sh
+echo . "$ldwell_path"/ocfs.sh
+echo 
+echo ldw_config_list='\''"$ldwell_config_lfile"'\''
+echo 
+echo ldw_default_config='\''"$ldwell_config_alias"'\''
+echo 
+echo ldwell_config_lfile='\'\"'$ldwell_path/$ldw_config_list'\"\''
+echo ldwell_config_alias='\'\"'$ldw_default_config'\"\''
+echo ldwell_call_config
+'
+alias dwell_create_loader="$dwell_create_loader"
+
 dwell_save_config='echo "`dwell_create_config`" >> "$ldwell_path/$ldwell_config_file"'
 alias dwell_save_config="$dwell_save_config"
+
+dwell_save_loader='echo "`dwell_create_loader`" >> "$ldwell_path/$ldwell_loader"'
+alias dwell_save_loader="$dwell_save_loader"
 
 dwell_rm_config='rm -f "$ldwell_path/$ldwell_config_file"'
 alias dwell_rm_config="$dwell_rm_config"

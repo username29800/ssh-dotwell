@@ -1,3 +1,6 @@
+# adjust this field when renaming or copying this file
+ldwell_loader='src.sh'
+
 ldwell_path='.'
 . "$ldwell_path"/lib.sh
 . "$ldwell_path"/ocsn.sh

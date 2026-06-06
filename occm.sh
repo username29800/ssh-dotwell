@@ -31,7 +31,7 @@ alias dwell_create_config="$dwell_create_config"
 
 dwell_create_loader='
 cdw_ldwell_path="`pwd`"
-echo ldwell_path='\\\''"`pwd`"'\\\''
+echo ldwell_path='\\\''"$ldwell_path"'\\\''
 echo 
 echo ldwell_loader='\'\"'$ldwell_path'\"\''/"$ldwell_loader"
 echo

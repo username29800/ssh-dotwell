@@ -1,4 +1,4 @@
-ldwell_path='.'
+ldwell_path="$ldwell_path"
 cdw_xsh='/usr/bin/ssh'
 cdw_xcp='/usr/bin/scp'
 cdw_srv='/usr/sbin/sshd'

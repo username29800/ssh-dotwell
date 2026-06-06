@@ -40,9 +40,9 @@ echo . "$cdw_ldwell_path"/ocsn.sh
 echo . "$cdw_ldwell_path"/occm.sh
 echo . "$cdw_ldwell_path"/ocfs.sh
 echo 
-echo ldw_config_list='\''"$ldwell_config_lfile"'\''
+echo ldw_config_list='\\\''"$ldwell_config_lfile"'\\\''
 echo 
-echo ldw_default_config='\''"$ldwell_config_alias"'\''
+echo ldw_default_config='\\\''"$ldwell_config_alias"'\\\''
 echo 
 echo ldwell_config_lfile='\'\"'$ldw_config_list'\"\''
 echo ldwell_config_alias='\'\"'$ldw_default_config'\"\''

@@ -6,8 +6,8 @@ echo cdw_srv='\\\''/usr/sbin/sshd'\\\''
 echo cdw_session_selfname='\\\''localhost'\\\''
 echo cdw_session_host='\\\''localhost'\\\''
 echo cdw_session_port='\\\''22'\\\''
-echo cdw_session_idlist='\\\'\''
-key_default'\'\\\''
+echo cdw_session_idlist='\'\"'
+$dwcm_newkey_name'\"\''
 echo cdw_session_user='\\\''user'\\\''
 echo cdw_session_jmp='\\\'''\\\''
 echo cdw_session_fwdrules='\\\'\''
@@ -35,10 +35,10 @@ echo ldwell_path='\\\''"$cdw_ldwell_path"'\\\''
 echo 
 echo ldwell_loader='\'\"'$ldwell_path'\"\''/"$ldwell_loader"
 echo
-echo . '\'\"'"$cdw_ldwell_path"/lib.sh'\'\"'
-echo . '\'\"'"$cdw_ldwell_path"/ocsn.sh'\'\"'
-echo . '\'\"'"$cdw_ldwell_path"/occm.sh'\'\"'
-echo . '\'\"'"$cdw_ldwell_path"/ocfs.sh'\'\"'
+echo . '\'\"'$ldwell_path/lib.sh'\"\''
+echo . '\'\"'$ldwell_path/ocsn.sh'\"\''
+echo . '\'\"'$ldwell_path/occm.sh'\"\''
+echo . '\'\"'$ldwell_path/ocfs.sh'\"\''
 echo 
 echo ldw_config_list='\\\''"$ldwell_config_lfile"'\\\''
 echo 

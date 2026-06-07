@@ -35,10 +35,10 @@ echo ldwell_path='\\\''"$cdw_ldwell_path"'\\\''
 echo 
 echo ldwell_loader='\'\"'$ldwell_path'\"\''/"$ldwell_loader"
 echo
-echo . "$cdw_ldwell_path"/lib.sh
-echo . "$cdw_ldwell_path"/ocsn.sh
-echo . "$cdw_ldwell_path"/occm.sh
-echo . "$cdw_ldwell_path"/ocfs.sh
+echo . '\'\"'"$cdw_ldwell_path"/lib.sh'\'\"'
+echo . '\'\"'"$cdw_ldwell_path"/ocsn.sh'\'\"'
+echo . '\'\"'"$cdw_ldwell_path"/occm.sh'\'\"'
+echo . '\'\"'"$cdw_ldwell_path"/ocfs.sh'\'\"'
 echo 
 echo ldw_config_list='\\\''"$ldwell_config_lfile"'\\\''
 echo 

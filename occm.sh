@@ -1,5 +1,4 @@
 dwell_create_config='
-echo ldwell_path='\\\''"$ldwell_path"'\\\''
 echo cdw_xsh='\\\''/usr/bin/ssh'\\\''
 echo cdw_xcp='\\\''/usr/bin/scp'\\\''
 echo cdw_srv='\\\''/usr/sbin/sshd'\\\''

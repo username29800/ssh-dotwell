@@ -1,26 +1,33 @@
 dwell_create_config='
+echo # executables
 echo cdw_xsh='\\\''/usr/bin/ssh'\\\''
 echo cdw_xcp='\\\''/usr/bin/scp'\\\''
 echo cdw_srv='\\\''/usr/sbin/sshd'\\\''
-echo cdw_session_selfname='\\\''localhost'\\\''
-echo cdw_session_host='\\\''localhost'\\\''
-echo cdw_session_port='\\\''22'\\\''
-echo cdw_session_idlist='\'\"'
-$dwcm_newkey_name'\"\''
-echo cdw_session_user='\\\''user'\\\''
-echo cdw_session_jmp='\\\'''\\\''
-echo cdw_session_fwdrules='\\\'\''
--R 6000::6000'\'\\\''
-echo ldwell_fwds='\''"`eval ldwell_create_fwdrule`"'\''
 echo
-echo dwfs_prefix='\\\''./'\\\''
-echo rdwfs_prefix='\\\''./'\\\''
-echo
+echo # auth options
 echo dwcm_newkey_name='\\\''key_default'\\\''
 echo dwcm_keystore_path='\\\''keystore'\\\''
 echo dwcm_keystore_backup='\\\''keystore_backup'\\\''
 echo rdwcm_authfile='\\\''/home/user/.ssh/authorized_keys'\\\''
+echo
+echo cdw_session_idlist='\'\"'
+$dwcm_newkey_name'\"\''
+echo
+echo cdw_session_selfname='\\\''localhost'\\\''
+echo cdw_session_host='\\\''localhost'\\\''
+echo cdw_session_port='\\\''22'\\\''
+echo cdw_session_user='\\\''user'\\\''
+echo cdw_session_jmp='\\\'''\\\''
+echo
+echo cdw_session_fwdrules='\\\'\''
+-R 6000::6000'\'\\\''
+echo
+echo # file transfer path prefix - trailing slash required
+echo dwfs_prefix='\\\''./'\\\''
+echo rdwfs_prefix='\\\''./'\\\''
 echo 
+echo # Do not touch this fields unless you know what you are doing
+echo ldwell_fwds='\''"`eval ldwell_create_fwdrule`"'\''
 echo cdw_env_home='\\\''"$HOME"'\\\''
 echo cdw_session_args='\''"-o UserKnownHostsFile=$ldwell_path/dotssh_internal/known_hosts"'\''
 echo cdw_session_args_srv='\''"-o AuthorizedKeysFile=$ldwell_path/dotssh_internal/authorized_keys"'\''

@@ -32,7 +32,8 @@ echo ldwell_fwds='\''"`eval ldwell_create_fwdrule`"'\''
 echo cdw_env_home='\\\''"$HOME"'\\\''
 echo cdw_session_args='\'\"'-o UserKnownHostsFile=$ldwell_path/dotssh_internal/known_hosts'\"\''
 echo cdw_session_args_srv='\'\"'-o AuthorizedKeysFile=$ldwell_path/dotssh_internal/authorized_keys -o X11Forwarding=yes -o PermitTTY=yes -o PermitTunnel=yes'\"\''
-echo cdw_session_idlist='\''"`echo "\`ldwell_flatten_idlist\`" | sed "s,\(^\| \),$ldwell_path/$dwcm_keystore_path/&,g"`"'\''
+echo cdw_session_idlist='\'\"'`echo "$cdw_session_idlist" | sed "s,^,$ldwell_path/$dwcm_keystore_path/," | sed '\'\\\''s,[^\\]//,,g'\\\'\''`'\"\''
+echo cdw_session_idlist='\'\"'`ldwell_flatten_idlist`'\"\''
 '
 alias dwell_create_config="$dwell_create_config"
 

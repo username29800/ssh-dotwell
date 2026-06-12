@@ -74,7 +74,8 @@ cd $dest/sve-eux-build
 #fc-cache
 cp -a $dest/.vimrc $dest/occasion-backups/.vimrc
 echo 'set nocp number autoindent smartindent tabstop=2 shiftwidth=2 expandtab' > $dest/.vimrc
-echo 'filetype plugin indent on' >> $dest/.vimrc
+echo 'filetype plugin off' >> $dest/.vimrc
+echo 'filetype indent on' >> $dest/.vimrc
 echo '" option disabled for neovim compatibility' >> $dest/.vimrc
 echo '" uncomment the line below to clear printheader' >> $dest/.vimrc
 echo '"printheader=""' >> $dest/.vimrc
